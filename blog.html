@@ -119,6 +119,28 @@
                 </table>
             </div>
         </section>
+        <section class="mt-14">
+            <h2 class="text-2xl font-semibold">Q.3: What is event loop and how does it works?</h2>
+            <p class="mt-7 text-justify">
+                The browser maintains a queue of events and behind the scenes the browser takes event from that queue
+                constantly and processing them by calling appropriate event handler if there is any.<br>
+                Javascript is a single thread programming language which means it can only execute one thing at a time.
+                By using event loop JS can be able to process asynchronous code, the code which depends on timers,
+                promises or responses from an external source.<br>
+                The event loop in javascript can manage and process asynchronous code by placing them in a queue of
+                events, without further waiting it allow the programme to run in a non-blocking way. When event loop
+                finds an
+                asynchronous operation then it added that to the event queue along with a callback function. After that
+                it searches other events in the queue
+                and runs them. If any event is processed then the event loop stops checking. Once the event
+                is over then the event loop executes that operation and searching for another event again in the queue
+                and this process goes on
+                until the JS
+                programme is stopped.
+            </p>
+
+        </section>
+        <a href="./index.html" class="block text-right mt-12 font-bold underline text-lg">Back To Home</a>
     </main>
 </body>
 
