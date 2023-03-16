@@ -140,6 +140,31 @@
             </p>
 
         </section>
+        <section class="mt-14">
+            <h2 class="text-2xl font-semibold">What is the working procedure of chooseQuiz?</h2>
+            <p class="mt-7 text-justify">
+                <span class="text-blue-500 font-semibold">chooseQuiz</span> function takes index and givenAns as two
+                parameters for
+                it. First it takes answers array to
+                iterate each element of that array and checks if the element id is equal to quizData array at index
+                position element id or not. After that it stores the result in isExist variable.<br>
+                If isExist is a truthy value then it sets 0 to the serial variable and iterates each element of the
+                answers array by a for of loop. If isExist variable object id is equal to answers array element id then
+                it splice answers array by remove one element from serial position and add a new object as it's element
+                which consists
+                by spreading an object at quizData array at index position including givenAns as a new property to it
+                and then break the loop. If isExist variable object id is not equal to answers array element id then it
+                increase serial value by adding one.<br>
+                On the other hand If isExist is a falsey value then it creates a new object by spreading quizData index
+                position
+                element (object) and added givenAns to its new property then push that object to the answers array
+                as
+                its
+                element.<br>
+                Lastly chooseQuiz function call displayAnswers function by setting answers array as it's argument.
+
+            </p>
+        </section>
         <a href="./index.html" class="block text-right mt-12 font-bold underline text-lg">Back To Home</a>
     </main>
 </body>
