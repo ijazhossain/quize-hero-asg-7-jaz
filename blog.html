@@ -141,7 +141,7 @@
 
         </section>
         <section class="mt-14">
-            <h2 class="text-2xl font-semibold">What is the working procedure of chooseQuiz?</h2>
+            <h2 class="text-2xl font-semibold">Q.4: What is the working procedure of chooseQuiz function?</h2>
             <p class="mt-7 text-justify">
                 <span class="text-blue-500 font-semibold">chooseQuiz</span> function takes index and givenAns as two
                 parameters for
@@ -162,6 +162,35 @@
                 its
                 element.<br>
                 Lastly chooseQuiz function call displayAnswers function by setting answers array as it's argument.
+                procedure
+
+            </p>
+        </section>
+        <section class="mt-14">
+            <h2 class="text-2xl font-semibold">Q.5: What is the working procedure of quizTimer function?</h2>
+            <p class="mt-7 text-justify">
+                <span class="text-blue-500 font-semibold">quizTimer</span> function takes dismiss as a parameter which
+                is a boolean value. If dismiss is true then it clears the interval using clearInterval method and
+                returns
+                from the function.<br>
+                If dismiss is false then the function sets up an interval using setInterval method. The interval
+                function is executed every 1000 millisecond.<br>
+                The setInterval function first select an element which contains a id named count by using the
+                querySelector method and stores it in the countHtml variable.<br>
+                Then it takes count variable and convert it to minute by dividing count by 60 and using Math.floor
+                method to
+                make it integer value then stores it in mod variable.<br>
+                Next it converts the convtMin to string by using toString method and checks it's length. If the length
+                is equal to 1 then set a 0 before convtMin value otherwise set convtMin in min variable.<br>
+                It also converts the mod variable to string by using toString method. If the length of mod variable is
+                equal to one then it also sets a zero before mod variable value otherwise set mod variable to countSec
+                variable.<br>
+                After that it sets countHtml innerHTML by concatenating min, : and countSec values with sec adding to
+                them manually. After that it increases count variable value by one.<br>
+                Lastly it checks if the count is greater than 60 or not. If count is grater than 60; then it checks if
+                count is divisible by 2 or not. If the count is divisible by 2 then it removes text-red-300 class and
+                add text-red-700 class from countHtml element
+                object. Else remove text-red-700 class and add text-red-300 class to countHtml element object.
 
             </p>
         </section>
