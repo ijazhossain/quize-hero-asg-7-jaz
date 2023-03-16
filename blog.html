@@ -1,15 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="cupcake">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blogs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        common: ["Rubik", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+
 </head>
 
-<body>
-
+<body class="font-common">
+    <main class="w-3/4 mx-auto my-14 ">
+        <!-- Q&A-1 -->
+        <section>
+            <h2 class="text-2xl font-semibold">Q.1: Write the differences between forEach, map, find and filter methods?
+            </h2>
+            <p class="mt-7 text-justify">
+                <span class="text-blue-400">forEach()</span> method takes every element of an array and
+                executes an
+                operation on each array element which is
+                being provided as a function. This method does not return a new array but it changes the existing
+                array.<br>
+                <span class="text-blue-400">map() </span>method iterates every element of the given array to
+                perform a task
+                and after that this method returns
+                a new array.<br>
+                <span class="text-blue-400">find() </span>method is used to find any element form an array
+                which fulfils a
+                given condition, instead of
+                returning an array this method only returns the first element which satisfies the condition or returns
+                undefined if so such element is not found in the array.<br>
+                <span class="text-blue-400">filter() </span>method is used to create an array with those
+                elements which fulfil a given condition provided to that method by a function. This method returns an
+                array
+                of element or elements which satisfy the provided condition.If so such element is not found then it
+                returns
+                an empty array.
+            </p>
+        </section>
+        <!-- Q&A-2 -->
+        <section class="mt-14">
+            <h2 class="text-2xl font-semibold">
+                Q.2: What is the difference between localStorage, sessionStorage and cookies?
+            </h2>
+            <p class="mt-12">
+                Local storage, session storage and cookies are the three types of storage which are provided by the
+                browser.
+                There are some basic differences among these three storages. Some of them are given below.
+            </p>
+            <div class="overflow-x-auto mt-7 rounded-lg border-[1px] border-gray-300">
+                <table class="table w-full ">
+                    <!-- head -->
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Cookies</th>
+                            <th>Session Storage</th>
+                            <th>Local Storage</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- row 1 -->
+                        <tr>
+                            <th>Expires/ Lifetime:</th>
+                            <td>Expire time is set manually</td>
+                            <td>Data expires after closing the tab</td>
+                            <td>Data never expires automatically</td>
+                        </tr>
+                        <!-- row 2 -->
+                        <tr class="hover">
+                            <th>Storage Location/ Scope:</th>
+                            <td>Stores data both browser and server</td>
+                            <td>Only stores user browser's data</td>
+                            <td>Only stores user browser's data</td>
+                        </tr>
+                        <!-- row 3 -->
+                        <tr>
+                            <th>Capacity/ Size:<br>
+                                <small class="font-light">(Varies browser to browser)</small>
+                            </th>
+                            <td class="whitespace-pre-wrap">The storage capacity is limited to 4KB of data.</td>
+                            <td class="whitespace-pre-wrap">It allows 5MB of data to be stored.</td>
+                            <td class="whitespace-pre-wrap">It allows 10MB of data to be stored.</td>
+                        </tr>
+                        <tr>
+                            <th>Security:</th>
+                            <td>Less Secure</td>
+                            <td>Secure</td>
+                            <td>Secure</td>
+                        </tr>
+                        <tr>
+                            <th>Browsers:</th>
+                            <td class="whitespace-pre-wrap">Cookies are the oldest (HTML4) and most wellknown mechanism.
+                            </td>
+                            <td class="whitespace-pre-wrap">Session Storage is a new feature introduced in HTML5</td>
+                            <td class="whitespace-pre-wrap">Local Storage is a new feature introduced in HTML5</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
 </body>
 
 </html>
